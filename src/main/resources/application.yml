@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: kafka_tail
+  kafka:
+    listener:
+      ack-mode: "manual_immediate"
+      missing-topics-fatal : false
+    consumer:
+      group-id: "test-kafka"
+      enable-auto-commit: false
+    bootstrap-server: http://localhost:9092
+
+kafka:
+  topic:
+    name1: send.topic1
+
+datasource:
+  h2:
+    test:
+      query-timeout: 30
+      jdbcUrl: jdbc:h2:mem:test_kafka
+      username: 'sa'
+      password: ''
+      driver-class-name: org.h2.Driver
