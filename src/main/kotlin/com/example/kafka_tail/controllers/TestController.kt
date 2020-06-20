@@ -9,7 +9,8 @@ import org.springframework.web.bind.annotation.RestController
 
 @RestController
 class TestController(
-        private val testKafkaProducer: TestKafkaProducer) {
+        private val testKafkaProducer: TestKafkaProducer
+) {
 
     @PostMapping("kafka/test", produces = ["application/json"])
     fun sendKafka(@RequestBody message: String) =

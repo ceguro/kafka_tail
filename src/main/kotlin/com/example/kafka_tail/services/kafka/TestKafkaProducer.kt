@@ -9,7 +9,7 @@ import org.springframework.util.concurrent.ListenableFuture
 import org.springframework.util.concurrent.ListenableFutureCallback
 
 @Component
-    class TestKafkaProducer(private val kafkaTemplate: KafkaTemplate<String, String>) {
+class TestKafkaProducer(private val kafkaTemplate: KafkaTemplate<String, String>) {
 
     @Value(value = "\${kafka.topic.name1}")
     private val topicName: String = ""
